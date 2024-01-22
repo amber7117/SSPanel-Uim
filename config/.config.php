@@ -20,24 +20,24 @@ $_ENV['checkNodeIp'] = true;               //是否webapi验证节点ip
 // db_host 例: localhost（可解析的主机名）, 127.0.0.1（IP 地址）, 10.0.0.2:4406（含端口)
 // db_socket 例：/var/run/mysqld/mysqld.sock（需使用绝对地址）
 $_ENV['db_driver']    = 'mysql';
-$_ENV['db_host']      = '';
+$_ENV['AZURE_MYSQL_HOST']      = '';
 $_ENV['db_socket']    = '';
-$_ENV['db_database']  = 'sspanel';           //数据库名
-$_ENV['db_username']  = 'root';              //数据库用户名
-$_ENV['db_password']  = 'sspanel';           //用户名对应的密码
-$_ENV['db_port']      = '3306';              //端口
+$_ENV['AZURE_MYSQL_DBNAME']  = 'sspanel';           //数据库名
+$_ENV['AZURE_MYSQL_USERNAME']  = 'root';              //数据库用户名
+$_ENV['AZURE_MYSQL_PASSWORD']  = 'sspanel';           //用户名对应的密码
+$_ENV['AZURE_MYSQL_PORT']      = '3306';              //端口
 #高级
 $_ENV['db_charset']   = 'utf8mb4';
 $_ENV['db_collation'] = 'utf8mb4_unicode_ci';
 $_ENV['db_prefix']    = '';
 
 //Redis设置-------------------------------------------------------------------------------------------
-$_ENV['redis_host']            = '127.0.0.1';    //Redis地址，使用unix domain socket时填写文件路径
-$_ENV['redis_port']            = 6379;           //Redis端口，使用unix domain socket时填写-1
+$_ENV['AZURE_REDIS_HOST']            = '127.0.0.1';    //Redis地址，使用unix domain socket时填写文件路径
+$_ENV['AZURE_REDIS_PORT']            = 6379;           //Redis端口，使用unix domain socket时填写-1
 $_ENV['redis_connect_timeout'] = 2.0;            //Redis连接超时时间，单位秒
 $_ENV['redis_read_timeout']    = 8.0;            //Redis读取超时时间，单位秒
 $_ENV['redis_username']        = '';             //Redis用户名，留空则不使用用户名连接
-$_ENV['redis_password']        = '';             //Redis密码，留空则无密码
+$_ENV['AZURE_REDIS_PASSWORD']        = '';             //Redis密码，留空则无密码
 $_ENV['redis_ssl']             = false;          //是否使用SSL连接Redis，如果使用了SSL，那么Redis端口应为Redis实例的TLS端口
 $_ENV['redis_ssl_context']     = [];             //使用SSL时的上下文选项，参考 https://www.php.net/manual/zh/context.ssl.php
 
