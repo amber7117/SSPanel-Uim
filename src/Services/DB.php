@@ -40,6 +40,12 @@ final class DB extends Manager
             'collation' => $_ENV['db_collation'],
             'prefix' => $_ENV['db_prefix'],
             'port' => $_ENV['db_port'],
+            'strict' => true,
+            'engine' => null,
+            'sslmode' => 'require',
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => ('/var/www/html/ca.pem'),
+            ]) : [],
         ];
     }
 }
